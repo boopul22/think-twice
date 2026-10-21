@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Think Twice! Tricky Puzzles</title>
+<link rel="icon" href="data:,">
+<link rel="preload" href="fonts/luckiest-guy.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/patrick-hand.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css?v=mvi0jp08">
+<script src="https://game-cdn.poki.com/scripts/v2/poki-sdk.js"></script>
+</head>
+<body>
+<div class="paper" id="paper-back"></div>
+<div class="paper" id="app">
+  <div id="topbar">
+    <button class="btn icon" id="btn-menu" aria-label="Pause"><svg viewBox="0 0 24 24" width="1em" height="1em"><rect x="5" y="4" width="5" height="16" rx="2" fill="currentColor"/><rect x="14" y="4" width="5" height="16" rx="2" fill="currentColor"/></svg></button>
+    <div id="level-label">LEVEL 1</div>
+    <div id="question" aria-live="polite"></div>
+    <div class="top-right">
+      <button class="btn icon" id="btn-restart" aria-label="Restart level"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20 3v5h-5"/></svg></button>
+      <button class="btn pill" id="btn-hint" aria-label="Hint"><span id="hint-count">3</span><span class="em">💡</span></button>
+    </div>
+  </div>
+  <div id="stage">
+    <div id="scene"></div>
+  </div>
+</div>
+
+<div id="title" class="hidden">
+  <div class="paper">
+    <div class="doodles" id="doodles"></div>
+    <div class="title-inner">
+      <div class="logo">THINK <span>TWICE!</span></div>
+      <div class="cards" id="btn-play" role="button" aria-label="Play">
+        <div class="c c1"></div>
+        <div class="c c2"></div>
+        <div class="c c3">
+          <div id="title-mascot"></div>
+          <div class="lvl" id="title-level">LEVEL 1</div>
+          <div class="cnt" id="title-count"></div>
+          <div class="rank-chip" id="title-rank"></div>
+        </div>
+      </div>
+      <div class="tap-hint" id="title-tap">TAP TO PLAY!</div>
+    </div>
+    <div class="title-top">
+      <div class="row">
+        <button class="btn icon" id="btn-levels" aria-label="Levels"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></button>
+      </div>
+      <div class="row">
+        <button class="btn icon" id="btn-sfx" aria-label="Sound effects"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg></button>
+        <button class="btn icon" id="btn-music" aria-label="Music"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3" fill="currentColor"/><circle cx="17" cy="16" r="3" fill="currentColor"/></svg></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="overlay" class="hidden">
+  <div class="panel" id="panel"></div>
+</div>
+
+<canvas id="fx"></canvas>
+<div id="adblock-shield" class="hidden"></div>
+
+<div id="loading">
+  <div class="logo">THINK<br>TWICE!</div>
+  <div class="spinner"></div>
+</div>
+
+<script src="js/game.js?v=mvi0jp08"></script>
+</body>
+</html>
